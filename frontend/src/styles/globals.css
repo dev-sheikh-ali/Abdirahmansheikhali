@@ -1,0 +1,4 @@
+/* Add any global styles here */
+body {
+  @apply bg-black text-white;
+}
