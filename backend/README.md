@@ -1,61 +1,72 @@
-# 🚀 Getting started with Strapi
+# Strapi Backend Setup
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Overview
+- Comments are handled by GitHub Discussions/utteranc.es
+- Blog content is managed through GitHub Issues
 
-### `develop`
+## Content Structure
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+### Single Types
+- **Home**: Main landing page content
 
-```
-npm run develop
-# or
-yarn develop
-```
+### Collections
+- **Projects**
+- **Skills** (with nested skills[])
+- **Expertise**
+- **CommunityImpact**
 
-### `start`
+## Components Setup
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+### Home Components
 
-```
-npm run start
-# or
-yarn start
-```
+#### 1. Hero Button (`heroButton`)
+- **Label**: Text (required)
+- **Link**: URL string (required)
+- **Type**: Enum ["primary", "secondary"] (optional)
 
-### `build`
+#### 2. Contact Icon (`contactIcon`)
+- **Platform**: Enum ["GitHub", "LinkedIn", "Email", "Resume", "TikTok", "X/Twitter"] (required)
+- **Icon**: Text/Media URL (required)
+- **Link**: URL/email string (required)
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+#### 3. Skill (`skill`)
+- **Name**: Text (required)
+- **Icon**: Text/Media URL (optional)
+- **Number**: Number - proficiency level (optional)
 
-```
-npm run build
-# or
-yarn build
-```
+#### 4. Skill Category (`skillCategory`)
+- **Category**: Text (required)
+- **Category Icon**: Text/Media URL (optional)
+- **Skills**: Repeatable skill component (required)
 
-## ⚙️ Deployment
+#### 5. Expertise (`expertise`)
+- **Icon**: Text/Media URL (optional)
+- **Title**: Text (required)
+- **Description**: Rich Text (required)
+- **Link**: URL string (optional)
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+#### 6. Community Impact (`communityImpact`)
+- **Image**: Media (optional)
+- **Description**: Rich Text (required)
+- **Location**: Text (required)
+- **Date**: Date (required)
 
-```
-yarn strapi deploy
-```
+## Home Single Type Structure
 
-## 📚 Learn more
+### Hero Section
+- **Images**: Media (repeatable - slider images)
+- **Intro**: Text (required)
+- **Tagline**: Text (required)
+- **Bio**: Rich Text (required)
+- **CTA Primary**: heroButton component
+- **CTA Secondary**: heroButton component
+- **Contact Icons**: Repeatable contactIcon component
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+### Skills Section
+- **Techskills**: Repeatable skillCategory component
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+### Expertise Section
+- **Expertise**: Repeatable expertise component
 
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+### Community Impact Section
+- **Community**: Repeatable communityImpact component
