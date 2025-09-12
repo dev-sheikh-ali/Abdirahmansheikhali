@@ -17,14 +17,14 @@ export const SkillCard: FC<Skill> = memo(({ name, icon, number }) => {
         {icon ? (
           <img src={icon} alt={name || ''} className="w-4 h-4" />
         ) : (
-          <span className="text-indigo-400 text-xs font-medium">{letter}</span>
+          <span className="text-white text-xs font-medium">{letter}</span>
         )}
       </div>
       
       {/* Simple horizontal progress bar */}
       <div className="relative flex-grow h-4">
         {/* Progress background */}
-        <div className="absolute inset-0 rounded bg-gray-800"></div>
+        <div className="absolute inset-0 rounded bg-gray-900"></div>
         
         {/* Progress indicator */}
         <div 

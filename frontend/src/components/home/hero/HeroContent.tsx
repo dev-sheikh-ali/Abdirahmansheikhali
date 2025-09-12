@@ -32,11 +32,11 @@ export const HeroContent = ({
           <span className="text-3xl lg:text-4xl font-extrabold text-blue-400">Hey there, I'm</span>
           <span className="text-4xl lg:text-5xl animate-wave hover:rotate-12 transition-transform">👋</span>
         </div>
-        <h1 className="text-3xl lg:text-5xl xl:text-6xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-indigo-500 text-transparent bg-clip-text leading-tight mb-2">
+        <h1 className="text-3xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight mb-2">
           {title}
         </h1>
       </div>
-      <p className="text-xl lg:text-2xl text-white font-medium tracking-wide animate-fade-in-up animation-delay-200">
+      <p className="text-xl lg:text-2xl text-green-400 font-medium tracking-wide animate-fade-in-up animation-delay-200">
         {subtitle}
       </p>
       <div className="relative pl-6 animate-fade-in-up animation-delay-300">

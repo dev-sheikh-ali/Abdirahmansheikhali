@@ -74,7 +74,8 @@ export interface HeroData {
   documentId: string;
   intro: string;
   tagline: string;
-  name?: string;
+  name?: string;  // This field is derived from data.title in fetchHeroData
+  title?: string; // Added the actual field from Strapi
   bio: BioBlock[];
   images: ImageData[];
   cta_primary: CTAButton;
@@ -113,7 +114,7 @@ export async function fetchHeroData(): Promise<HeroData> {
     documentId: data.documentId,
     intro: data.intro,
     tagline: data.tagline,
-    name: data.name || 'Abdirahman Sheikh Ali',
+    name: data.title || 'Abdirahman Sheikh Ali', // Using title field instead of name
     bio: data.bio,
     cta_primary: data.cta_primary,
     cta_secondary: data.cta_secondary,

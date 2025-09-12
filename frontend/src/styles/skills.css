@@ -1,4 +1,4 @@
-/* Animations */
+/* Animation for skill items to appear with a fade-in from bottom effect */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -15,6 +15,7 @@
   will-change: transform, opacity;
 }
 
+/* Animation for progress bars to expand from 0% to their final width */
 @keyframes progressWidth {
   from {
     width: 0%;
@@ -24,122 +25,4 @@
 .progress-animate {
   animation: progressWidth 1.2s ease-out forwards;
   will-change: width;
-}
-
-/* Add slight hover effect to skill cards */
-.skill-card:hover .bg-indigo-500 {
-  filter: brightness(1.1);
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* Fix for SVG circles */
-circle {
-  transition: stroke-dasharray 1s ease;
-}
-
-/* Hexagonal Grid Layout */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-  gap: 12px;
-  padding: 12px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-@media (min-width: 640px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
-}
-
-@media (min-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  }
-}
-
-/* Skill Card Styling */
-.skill-card {
-  width: 100%;
-  aspect-ratio: 1/1;
-  perspective: 1000px;
-}
-
-.skill-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: rgba(30, 30, 46, 0.5);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  animation: float 4s ease-in-out infinite;
-}
-
-.skill-card-inner:hover {
-  border-color: rgba(99, 102, 241, 0.6);
-  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.15);
-  transform: translateY(-5px);
-}
-
-.skill-card-front {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  width: 100%;
-  height: 100%;
-}
-
-.skill-card-front > .relative {
-  width: 44px;
-  height: 44px;
-}
-
-.skill-name {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: white;
-  text-align: center;
-  margin-top: 4px;
-  background-color: rgba(17, 17, 27, 0.6);
-  padding: 2px 6px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.skill-card-inner:hover .skill-name {
-  background-color: rgba(99, 102, 241, 0.2);
-}
-
-/* Add a staggered animation delay to create a wave effect */
-.skills-grid > div:nth-child(odd) .skill-card-inner {
-  animation-delay: 0.2s;
-}
-
-.skills-grid > div:nth-child(3n) .skill-card-inner {
-  animation-delay: 0.4s;
-}
-
-.skills-grid > div:nth-child(5n) .skill-card-inner {
-  animation-delay: 0.6s;
 }

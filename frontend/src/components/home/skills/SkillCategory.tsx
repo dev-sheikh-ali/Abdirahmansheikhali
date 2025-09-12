@@ -4,7 +4,7 @@ import type { SkillCategory as ISkillCategory } from '../../../types/skills';
 
 const CategoryHeader: FC<Pick<ISkillCategory, 'category' | 'category_icon'>> = memo(
   ({ category, category_icon }) => (
-    <div className="flex items-center gap-2 mb-3 pb-2 border-b border-indigo-500/30">
+    <div className="flex items-center gap-2 mb-3 pb-2 border-b border-gray-700/30">
       {category_icon ? (
         <img 
           src={category_icon} 
@@ -12,11 +12,11 @@ const CategoryHeader: FC<Pick<ISkillCategory, 'category' | 'category_icon'>> = m
           className="w-6 h-6" 
         />
       ) : (
-        <span className="text-blue-400 text-lg font-bold uppercase w-6 h-6 flex items-center justify-center">
+        <span className="text-white text-lg font-bold uppercase w-6 h-6 flex items-center justify-center">
           {category.charAt(0)}
         </span>
       )}
-      <h3 className="text-lg font-bold text-blue-300 capitalize">
+      <h3 className="text-lg font-bold text-white capitalize">
         {category}
       </h3>
     </div>
@@ -32,7 +32,7 @@ export const SkillCategory: FC<ISkillCategory> = memo(({ id, category, category_
   const hasMoreSkills = remainingSkills.length > 0;
   
   return (
-    <div key={id} className="bg-gray-900 rounded-lg p-3 border border-gray-800">
+    <div key={id} className="bg-black rounded-lg p-3 border border-gray-800">
       {/* Category Header */}
       <CategoryHeader category={category} category_icon={category_icon} />
       
@@ -68,7 +68,7 @@ export const SkillCategory: FC<ISkillCategory> = memo(({ id, category, category_
         {hasMoreSkills && (
           <button 
             onClick={() => setShowAll(!showAll)}
-            className="text-xs text-blue-400 hover:text-blue-300 mt-2 py-1 transition-colors focus:outline-none"
+            className="text-xs text-white hover:text-gray-300 mt-2 py-1 transition-colors focus:outline-none"
           >
             {showAll ? 'Show less' : `Show ${remainingSkills.length} more`}
           </button>

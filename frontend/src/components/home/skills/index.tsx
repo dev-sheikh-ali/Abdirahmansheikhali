@@ -7,16 +7,16 @@ const LoadingSkills: FC = () => (
     <div className="container mx-auto px-6">
       <div className="animate-pulse flex flex-col items-center gap-8">
         <div className="text-center space-y-4">
-          <div className="h-10 w-64 bg-blue-600/20 rounded mx-auto"></div>
-          <div className="h-4 w-96 bg-blue-600/10 rounded mx-auto"></div>
+          <div className="h-10 w-64 bg-gray-800/50 rounded mx-auto"></div>
+          <div className="h-4 w-96 bg-gray-800/30 rounded mx-auto"></div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
           {[1, 2].map((i) => (
             <div key={i} className="space-y-4">
-              <div className="h-8 bg-blue-600/10 rounded-lg w-1/3"></div>
+              <div className="h-8 bg-gray-800/40 rounded-lg w-1/3"></div>
               <div className="grid grid-cols-2 gap-4">
                 {[1, 2, 3, 4].map((j) => (
-                  <div key={j} className="h-24 bg-blue-600/5 rounded-lg border border-blue-500/10"></div>
+                  <div key={j} className="h-24 bg-gray-800/20 rounded-lg border border-gray-700/20"></div>
                 ))}
               </div>
             </div>
@@ -49,10 +49,10 @@ const Skills: FC = () => {
     <section className="py-8 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Technical Skills & Technologies
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto text-lg mb-8">
+          <p className="text-gray-400 max-w-3xl mx-auto text-lg mb-8">
             I work with cutting-edge technologies and frameworks to build innovative solutions. From full-stack development to IoT systems, these are the tools and technologies that power my creative process.
           </p>
         </div>
