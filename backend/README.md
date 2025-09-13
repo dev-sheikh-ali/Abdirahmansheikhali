@@ -10,12 +10,18 @@
 - **Home**: Main landing page content
 
 ### Collections
-- **Projects**
+- **Projects** (portfolio projects with tech stack)
 - **Skills** (with nested skills[])
 - **Expertise**
 - **CommunityImpact**
 
 ## Components Setup
+
+### Global Components
+
+#### 1. TechStack (`techStack`)
+- **name**: Text (required)
+- **icon**: Text (optional)
 
 ### Home Components
 
@@ -50,6 +56,15 @@
 - **Description**: Rich Text (required)
 - **Location**: Text (required)
 - **Date**: Date (required)
+
+## Projects Collection Structure
+- **Title**: Text (required)
+- **Slug**: Text (required, auto-generated from Title)
+- **Thumbnail**: Media (required)
+- **description**: Text (required)
+- **GitHubLink**: Text (optional)
+- **LiveLink**: Text (optional)
+- **techStack**: Repeatable Component (`TechStack`)
 
 ## Home Single Type Structure
 

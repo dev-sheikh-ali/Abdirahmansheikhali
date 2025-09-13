@@ -1,11 +1,18 @@
-export default function MainLayout({ children, isHero = false }) {
-	const containerClasses = isHero
-		? 'w-full flex-1 flex flex-col'
-		: 'w-full max-w-3xl px-4 flex-1 flex flex-col gap-20 py-16';
+import { FC, ReactNode } from 'react';
 
-	return (
-		<main className="min-h-screen bg-black text-white flex flex-col items-center">
-			<div className={containerClasses}>{children}</div>
-		</main>
-	);
+interface MainLayoutProps {
+  children: ReactNode;
+  isHero?: boolean;
 }
+
+const MainLayout: FC<MainLayoutProps> = ({ children, isHero = false }) => {
+  return (
+    <main className={`min-h-screen bg-black text-white flex flex-col ${
+      isHero ? 'pt-0' : 'pt-4 md:pt-6'
+    }`}>
+      {children}
+    </main>
+  );
+};
+
+export default MainLayout;

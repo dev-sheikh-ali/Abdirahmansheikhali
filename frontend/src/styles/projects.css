@@ -1,0 +1,133 @@
+/* Project styles */
+
+.project-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #111827;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.2);
+}
+
+.project-image {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Tech stack styles */
+.tech-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(31, 41, 55, 0.8);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  color: #e5e7eb;
+}
+
+.tech-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+/* Icon link styles */
+.project-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f4f6;
+  transition: all 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.project-icon-link:hover {
+  transform: translateY(-2px);
+  color: #a855f7;
+}
+
+/* Pagination styles */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.pagination-container::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+}
+
+.pagination-wrapper {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pagination-number {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.pagination-number:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.pagination-number.active {
+  background-color: white;
+  color: #111827;
+  font-weight: 600;
+  transform: translateY(-1px);
+}
+
+.pagination-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: white;
+  margin: 0 2px;
+  transition: all 0.2s ease;
+}
+
+.pagination-arrow.active:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.pagination-arrow.disabled {
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+}

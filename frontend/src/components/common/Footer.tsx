@@ -9,6 +9,10 @@ export default function Footer() {
 										<div>
 											<h2 className="text-xl font-bold mb-1">Abdirahman Sheikh Ali</h2>
 											<p className="text-sm text-gray-400">Software engineer | child safety advocate</p>
+											{/* logo */}
+											<div className="mt-2">
+												<img src="/assets/logo.png" alt="Logo" className="h-16 w-16 rounded-full" />
+											</div>
 										</div>
 				{/* Quick Links */}
 				<div>
