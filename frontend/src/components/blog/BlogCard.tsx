@@ -75,76 +75,63 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   const readingTime = post.frontmatter?.readingTime || `${Math.ceil(post.body.length / 1500)} min read`;
   
   return (
-    <div className="bg-zinc-900/50 border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition duration-300 flex flex-col h-full">
-      {/* Featured image */}
+  <div className="flex flex-col md:flex-row bg-zinc-900/80 border border-zinc-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 min-h-[180px] md:min-h-[220px] w-full">
+      {/* Image section */}
       {image && (
-        <Link to={`/blog/${slug}`} className="block overflow-hidden h-48">
-          <img 
-            src={image} 
-            alt={post.title} 
-            className="w-full h-full object-cover hover:scale-105 transition duration-500"
+        <Link to={`/blog/${slug}`} className="flex-shrink-0 w-full md:w-80 h-48 md:h-auto bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
+          <img
+            src={image}
+            alt={post.title}
+            className="object-cover w-full h-full"
           />
         </Link>
       )}
-      
-      {/* Content */}
-      <div className="p-6 flex flex-col flex-grow">
-        {/* Date and reading time */}
-        <div className="flex items-center text-sm text-gray-400 mb-2">
-          <span>{formattedDate}</span>
-          <span className="mx-2">•</span>
-          <span>{readingTime}</span>
+      {/* Content section */}
+      <div className="flex flex-col justify-between p-4 md:p-6 flex-1">
+        <div>
+          {/* Categories */}
+          {post.labels.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-2">
+              {post.labels
+                .filter(label => !['type:post', 'state:published', 'state:draft'].includes(label.name))
+                .map(label => (
+                  <Link
+                    key={label.id}
+                    to={`/blog?category=${label.name}`}
+                    className="text-xs px-3 py-1 rounded-full bg-violet-100 text-violet-700 dark:bg-violet-900 dark:text-violet-200 font-semibold"
+                  >
+                    {label.name}
+                  </Link>
+                ))}
+            </div>
+          )}
+          {/* Title */}
+          <h3 className="text-2xl font-bold text-white mb-2">
+            <Link to={`/blog/${slug}`}>{post.title}</Link>
+          </h3>
+          {/* Excerpt */}
+          <p className="text-white mb-4 text-base">
+            {excerpt}
+          </p>
         </div>
-        
-        {/* Title */}
-        <h3 className="text-xl font-semibold text-white mb-2 hover:text-blue-400 transition">
-          <Link to={`/blog/${slug}`}>
-            {post.title}
-          </Link>
-        </h3>
-        
-        {/* Categories */}
-        {post.labels.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {post.labels
-              .filter(label => !['type:post', 'state:published', 'state:draft'].includes(label.name))
-              .map(label => (
-                <Link 
-                  key={label.id}
-                  to={`/blog?category=${label.name}`}
-                  className="text-xs px-2 py-1 rounded-md"
-                  style={{ 
-                    backgroundColor: `#${label.color}20`, 
-                    color: `#${label.color}` 
-                  }}
-                >
-                  {label.name}
-                </Link>
-              ))
-            }
+        <div className="flex items-center justify-between mt-4">
+          {/* Author and date with avatar */}
+          <div className="flex items-center gap-2 text-sm text-zinc-300">
+            {post.user.avatar_url && (
+              <img src={post.user.avatar_url} alt={post.user.login} className="w-7 h-7 rounded-full border border-zinc-700" />
+            )}
+            <span className="font-medium">{post.user.name || post.user.login}</span>
+            <span className="mx-2">•</span>
+            <span>{formattedDate}</span>
           </div>
-        )}
-        
-        {/* Excerpt */}
-        <p className="text-gray-300 mb-4 flex-grow">
-          {excerpt}
-        </p>
-        
-        {/* Read more link */}
-        <Link 
-          to={`/blog/${slug}`}
-          className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center group"
-        >
-          Read more
-          <svg 
-            className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
+          {/* Read more button */}
+          <Link
+            to={`/blog/${slug}`}
+            className="px-5 py-2 bg-violet-700 hover:bg-violet-800 text-white rounded-lg font-semibold transition"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
+            Read more →
+          </Link>
+        </div>
       </div>
     </div>
   );

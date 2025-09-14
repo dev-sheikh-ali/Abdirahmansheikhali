@@ -17,9 +17,11 @@ const BlogList = () => {
   }
 
   return (
-    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div className="flex flex-col gap-8 items-center w-full px-0">
       {posts.posts.map(post => (
-        <BlogCard key={post.id} post={post} />
+  <div className="w-full max-w-7xl mx-auto">
+          <BlogCard key={post.id} post={post} />
+        </div>
       ))}
     </div>
   );

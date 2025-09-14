@@ -6,7 +6,7 @@ export default function Blog() {
       {/* Intro Section */}
   <div className="w-full max-w-4xl text-center mx-auto mt-8 mb-8 px-4">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-          Abdirahman’s Blog
+          My Blog
         </h1>
         <p className="text-gray-400 max-w-3xl mx-auto text-lg mt-2 mb-2">
           Welcome to my corner of the internet where I share insights on{' '}
