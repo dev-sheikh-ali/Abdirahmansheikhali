@@ -34,11 +34,11 @@ export const ExpertiseCard = ({ title, decription, icon, link }: ExpertiseCardPr
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto inline-flex items-center text-white hover:text-gray-300 transition-colors duration-300"
+          className="mt-auto inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200 px-2 py-1 rounded focus:outline-none focus:underline"
         >
           Learn More
           <svg
-            className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+            className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
