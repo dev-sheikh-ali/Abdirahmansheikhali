@@ -9,6 +9,7 @@
  * - Link to full post
  */
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa';
 import { format } from 'date-fns';
 import { BlogPost } from '../../types/blog';
 
@@ -127,9 +128,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           {/* Read more button */}
           <Link
             to={`/blog/${slug}`}
-            className="px-5 py-2 bg-violet-700 hover:bg-violet-800 text-white rounded-lg font-semibold transition"
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200 px-2 py-1 rounded focus:outline-none focus:underline"
           >
-            Read more →
+            Learn More <FaArrowRight className="ml-1" />
           </Link>
         </div>
       </div>
