@@ -5,6 +5,7 @@ import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
+import BlogDetail from './components/blog/BlogDetail';
 import Projects from './pages/Projects';
 import ErrorPage from './pages/ErrorPage';
 
@@ -19,6 +20,7 @@ function AppContent() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/blog" element={<Blog />} />
+					<Route path="/blog/:slug" element={<BlogDetail />} />
 					<Route path="/projects" element={<Projects />} />
 					<Route path="*" element={<ErrorPage />} />
 				</Routes>

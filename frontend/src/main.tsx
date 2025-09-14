@@ -5,6 +5,8 @@ import './styles/tailwind.css';
 import './styles/globals.css';
 import './styles/skills.css';
 import './styles/projects.css';
+import './styles/blog.css';
+import './styles/blog-toc.css';
 import App from './App';
 
 const queryClient = new QueryClient({

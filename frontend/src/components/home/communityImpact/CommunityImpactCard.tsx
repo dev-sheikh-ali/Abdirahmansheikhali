@@ -108,7 +108,7 @@ export const CommunityImpactCard = ({ impact }: CommunityImpactCardProps) => {
               </div>
             )}
             {/* Text Column */}
-            <div className="prose prose-invert max-w-none md:w-2/3">
+              <div className="md:w-2/3">
               <div className="space-y-3">
                 {impact.description.map((paragraph, index) => (
                   <p key={index} className="text-gray-300 leading-relaxed text-base tracking-wide">

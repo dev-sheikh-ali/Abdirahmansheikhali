@@ -1,0 +1,31 @@
+/* Blog styles for table of contents and heading anchors */
+
+/* Make headings position relative for anchor positioning */
+.prose h2,
+.prose h3,
+.prose h4 {
+  position: relative;
+  scroll-margin-top: 100px; /* Add scroll margin for fixed headers */
+}
+
+/* Style for the table of contents */
+.table-of-contents {
+  position: sticky;
+  top: 2rem;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .table-of-contents {
+    position: relative;
+    top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #374151;
+  }
+}
