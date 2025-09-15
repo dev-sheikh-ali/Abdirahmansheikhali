@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_home_community_impacts",
+  "info": {
+    "displayName": "communityImpact"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "date": {
+      "type": "date"
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "location": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

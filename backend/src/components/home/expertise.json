@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_home_expertise",
+  "info": {
+    "displayName": "expertise"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "decription": {
+      "type": "text",
+      "required": true,
+      "unique": false
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

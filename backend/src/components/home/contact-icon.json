@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_contact_icons",
+  "info": {
+    "displayName": "contactIcon"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "GitHub",
+        "LinkedIn",
+        "Email",
+        "Resume"
+      ]
+    },
+    "icon": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

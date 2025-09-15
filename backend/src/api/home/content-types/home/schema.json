@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "intro": {
+      "type": "text",
+      "required": true
+    },
+    "tagline": {
+      "type": "string",
+      "required": true
+    },
+    "bio": {
+      "type": "blocks",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "cta_primary": {
+      "type": "component",
+      "component": "home.hero-button",
+      "repeatable": false
+    },
+    "cta_secondary": {
+      "type": "component",
+      "component": "home.hero-button",
+      "repeatable": false
+    },
+    "contact_icons": {
+      "type": "component",
+      "component": "home.contact-icon",
+      "repeatable": true
+    },
+    "Techskills": {
+      "type": "component",
+      "component": "home.skill-category",
+      "repeatable": true
+    },
+    "expertise": {
+      "type": "component",
+      "component": "home.expertise",
+      "repeatable": true
+    },
+    "community": {
+      "type": "component",
+      "component": "home.community-impact",
+      "repeatable": true
+    }
+  }
+}

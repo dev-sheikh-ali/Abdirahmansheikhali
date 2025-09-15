@@ -1,0 +1,59 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@strapi/admin": "^5.23.4",
+    "@strapi/cloud-cli": "^5.23.4",
+    "@strapi/content-manager": "^5.23.4",
+    "@strapi/content-releases": "^5.23.4",
+    "@strapi/content-type-builder": "^5.23.4",
+    "@strapi/core": "^5.23.4",
+    "@strapi/data-transfer": "^5.23.4",
+    "@strapi/email": "^5.23.4",
+    "@strapi/i18n": "^5.23.4",
+    "@strapi/plugin-cloud": "^5.23.4",
+    "@strapi/plugin-users-permissions": "^5.23.4",
+    "@strapi/review-workflows": "^5.23.4",
+    "@strapi/strapi": "^5.23.4",
+    "@strapi/types": "^5.23.4",
+    "@strapi/upload": "^5.23.4",
+    "axios": "^1.12.2",
+    "external-editor": "^3.1.0",
+    "inquirer": "^12.9.6",
+    "koa": "^2.16.2",
+    "pg": "^8.16.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0",
+    "tmp": "^0.2.5",
+    "vite": "^7.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.4.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "c74f182f-38fe-43fb-9279-459ae4e12077",
+    "installId": "111fa44aac564bc0fa0b694238c981f326602e688b4c35920d21e85072a3cf6f"
+  }
+}

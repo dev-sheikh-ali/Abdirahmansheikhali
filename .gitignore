@@ -1,42 +1,8 @@
-# Backend - ignore everything in backend directory
-/backend/*
-!/backend/README.md
-
+############################
 # Frontend
-/frontend/node_modules
-/frontend/.env
-/frontend/.env.local
-/frontend/.env.development.local
-/frontend/.env.test.local
-/frontend/.env.production.local
-/frontend/dist
-/frontend/build
-/frontend/.cache
-
-# Dependencies
-node_modules
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# IDE and Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-.DS_Store
-
-# Root level files that shouldn't be tracked
-/package-lock.json
-/package.json
-/postcss.config.js
-/tailwind.config.js
-
-# Misc
-.DS_Store
-*.log
-*.pem
+############################
 frontend/node_modules/
+frontend/package-lock.json
 frontend/.env
 frontend/.env.local
 frontend/.env.development.local
@@ -45,9 +11,20 @@ frontend/.env.production.local
 frontend/dist/
 frontend/build/
 frontend/.cache/
+frontend/.next/
+frontend/.vercel/
 
-# Backend specific
+# Frontend debug logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+
+############################
+# Backend
+############################
 backend/node_modules/
+backend/package-lock.json
 backend/.env
 backend/.cache/
 backend/.tmp/
@@ -56,20 +33,38 @@ backend/build/
 backend/public/uploads/*
 !backend/public/uploads/.gitkeep
 
+# Backend debug logs
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+
+# Ignore backend lock files only if you want reproducible builds without noise
+# If you want to **track backend/package-lock.json**, remove this line:
+# backend/package-lock.json
+
+
+############################
+# Dependencies (root level)
+############################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+############################
 # IDE and Editor files
+############################
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Debug logs
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-backend/npm-debug.log*
-backend/yarn-debug.log*
-backend/yarn-error.log*
 
+############################
 # System Files
+############################
 .DS_Store
 Thumbs.db
+
+

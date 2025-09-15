@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_project_tech_stacks",
+  "info": {
+    "displayName": "techStack"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
