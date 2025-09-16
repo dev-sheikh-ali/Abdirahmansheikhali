@@ -1,0 +1,8 @@
+name = "abdirahmansheikhali-worker"
+main = "worker.js"
+compatibility_date = "2025-09-16"
+
+[assets]
+directory = "./frontend/dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"

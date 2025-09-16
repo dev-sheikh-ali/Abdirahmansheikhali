@@ -1,21 +1,33 @@
 import { useEffect, useState } from 'react';
 import { fetchHeroData, HeroData } from '../../api/home/heroApi';
 
+// Custom hook to fetch and manage the state of hero section data
 export function useHeroData() {
+  // State to hold the hero data fetched from Strapi
   const [data, setData] = useState<HeroData | null>(null);
+  // State to indicate if the data is currently being loaded
   const [loading, setLoading] = useState(true);
+  // State to hold any error encountered during fetch
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    let isMounted = true;
-    setLoading(true);
-    setError(null);
-    fetchHeroData()
-      .then(res => { if (isMounted) setData(res); })
-      .catch(err => { if (isMounted) setError(err); })
-      .finally(() => { if (isMounted) setLoading(false); });
+    let isMounted = true; // Prevents state updates if component is unmounted
+    setLoading(true);     // Set loading to true before starting fetch
+    setError(null);       // Reset error before fetch
+    fetchHeroData()       // Fetch hero data from API
+      .then(res => {
+        if (isMounted) setData(res); // Set data if still mounted
+      })
+      .catch(err => {
+        if (isMounted) setError(err); // Set error if fetch fails
+      })
+      .finally(() => {
+        if (isMounted) setLoading(false); // Set loading to false when done
+      });
+    // Cleanup function to avoid setting state after unmount
     return () => { isMounted = false; };
   }, []);
 
+  // Return the data, loading, and error state for use in components
   return { data, loading, error };
 }
