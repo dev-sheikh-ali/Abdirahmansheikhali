@@ -1,5 +1,7 @@
+// HeroContent component displays the main textual content of the hero section, including intro, title, subtitle, bio, and CTA buttons.
 import { CTAButton } from '../../../api/home/heroApi';
 
+// Define the expected props for the HeroContent component
 interface HeroContentProps {
   intro: string;
   title: string;
@@ -15,6 +17,7 @@ interface HeroContentProps {
   cta_secondary: CTAButton;
 }
 
+// Main functional component for hero content
 export const HeroContent = ({ 
   intro,
   title, 
@@ -23,6 +26,7 @@ export const HeroContent = ({
   cta_primary,
   cta_secondary 
 }: HeroContentProps) => {
+  // Extract the first bio text for display
   const bioText = bio[0]?.children[0]?.text || '';
 
   return (
@@ -46,6 +50,7 @@ export const HeroContent = ({
         </p>
       </div>
       <div className="flex gap-4 animate-fade-in-up animation-delay-400">
+        {/* Render primary CTA button if provided */}
         {cta_primary && (
           <a
             href={cta_primary.link}
@@ -54,6 +59,7 @@ export const HeroContent = ({
             {cta_primary.label}
           </a>
         )}
+        {/* Render secondary CTA button if provided */}
         {cta_secondary && (
           <a
             href={cta_secondary.link}

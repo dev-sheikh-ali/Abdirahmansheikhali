@@ -1,6 +1,9 @@
 
 
 
+
+// Import the SEO component for meta tags
+import SEO from '../components/common/SEO';
 // Import the Hero section component for the home page
 import { Hero } from '../components/home/hero';
 // Import the Skills section component for the home page
@@ -14,6 +17,13 @@ import CommunityImpact from '../components/home/communityImpact';
 export default function Home() {
   return (
     <>
+      {/* SEO meta tags for homepage, using hero images as preview */}
+      <SEO
+        title="Abdirahman Sheikh Ali | Software Engineer & Child Safety Advocate"
+        description="Purpose-driven technologist dedicated to ethical, intelligent systems, child safety, and digital inclusion. Explore projects, blog, and more."
+        image="/assets/preview.png"
+        url="https://abdirahmansheikhali.com/"
+      />
       {/* Renders the Hero section at the top of the home page */}
       <Hero />
       {/* Renders the Skills section below the Hero section */}

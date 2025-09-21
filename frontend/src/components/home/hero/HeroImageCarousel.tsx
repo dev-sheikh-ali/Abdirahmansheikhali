@@ -11,9 +11,7 @@ export const HeroImageCarousel = ({ images }: HeroImageCarouselProps) => {
         {images.map((image) => (
           <div
             key={image.id}
-            className="relative overflow-hidden rounded-lg shadow-lg 
-              h-[200px] w-[200px] md:h-[250px] md:w-[250px]
-              hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
+            className="relative overflow-hidden rounded-lg shadow-lg w-[150px] h-[150px] xs:w-[170px] xs:h-[170px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[250px] lg:h-[250px] hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300"
           >
             <img
               src={image.formats.large.url}

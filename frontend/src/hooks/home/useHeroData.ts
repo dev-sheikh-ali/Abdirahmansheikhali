@@ -1,7 +1,7 @@
+// Custom React hook to fetch and manage the state of hero section data from the API
 import { useEffect, useState } from 'react';
 import { fetchHeroData, HeroData } from '../../api/home/heroApi';
 
-// Custom hook to fetch and manage the state of hero section data
 export function useHeroData() {
   // State to hold the hero data fetched from Strapi
   const [data, setData] = useState<HeroData | null>(null);
@@ -11,7 +11,8 @@ export function useHeroData() {
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
-    let isMounted = true; // Prevents state updates if component is unmounted
+    // Track if the component is still mounted to avoid state updates after unmount
+    let isMounted = true;
     setLoading(true);     // Set loading to true before starting fetch
     setError(null);       // Reset error before fetch
     fetchHeroData()       // Fetch hero data from API
