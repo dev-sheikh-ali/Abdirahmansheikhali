@@ -1,10 +1,18 @@
+
+import SEO from '../components/common/SEO';
 import BlogList from "../components/blog/BlogList";
 
 export default function Blog() {
   return (
     <>
+      <SEO
+        title="Blog | Abdirahman Sheikh Ali"
+        description="Insights on AI, IoT, software development, child safety, and more. Explore Abdirahman Sheikh Ali's blog for tech, advocacy, and personal growth."
+        image="/assets/preview.jpg"
+        url="https://abdirahmansheikhali.com/blog"
+      />
       {/* Intro Section */}
-  <div className="w-full max-w-4xl text-center mx-auto mt-8 mb-8 px-4">
+      <div className="w-full max-w-4xl text-center mx-auto mt-8 mb-8 px-4">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
           My Blog
         </h1>

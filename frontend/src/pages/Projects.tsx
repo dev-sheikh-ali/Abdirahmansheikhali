@@ -1,3 +1,5 @@
+
+import SEO from '../components/common/SEO';
 import { FC, useEffect } from 'react';
 import MainLayout from '../layouts/MainLayout';
 import ProjectsContainer from '../components/projects';
@@ -10,9 +12,17 @@ const Projects: FC = () => {
   }, []);
 
   return (
-    <MainLayout>
-      <ProjectsContainer />
-    </MainLayout>
+    <>
+      <SEO
+        title="Projects | Abdirahman Sheikh Ali"
+        description="Explore innovative software engineering and advocacy projects by Abdirahman Sheikh Ali. Focused on AI, IoT, and child safety."
+        image="/assets/preview.jpg"
+        url="https://abdirahmansheikhali.com/projects"
+      />
+      <MainLayout>
+        <ProjectsContainer />
+      </MainLayout>
+    </>
   );
 };
 

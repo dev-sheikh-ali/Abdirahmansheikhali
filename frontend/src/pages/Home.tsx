@@ -1,7 +1,3 @@
-
-
-
-
 // Import the SEO component for meta tags
 import SEO from '../components/common/SEO';
 // Import the Hero section component for the home page
@@ -21,7 +17,7 @@ export default function Home() {
       <SEO
         title="Abdirahman Sheikh Ali | Software Engineer & Child Safety Advocate"
         description="Purpose-driven technologist dedicated to ethical, intelligent systems, child safety, and digital inclusion. Explore projects, blog, and more."
-        image="/assets/preview.png"
+        image="/assets/preview.jpg"
         url="https://abdirahmansheikhali.com/"
       />
       {/* Renders the Hero section at the top of the home page */}
